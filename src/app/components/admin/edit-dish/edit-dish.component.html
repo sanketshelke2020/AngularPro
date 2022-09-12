@@ -54,6 +54,9 @@
           <mat-error *ngIf="price.invalid">Min : 10</mat-error>
         </mat-form-field>
         <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Edit</button>
+        <div>
+          <a [routerLink]="['/admin']">Go Back to Dishes</a>
+        </div>
         </form>
 </div> 
 

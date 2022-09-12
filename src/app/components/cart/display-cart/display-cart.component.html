@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col"><h2>Total : {{total}}</h2></div>
-  <div class="col"><button mat-raised-button color="primary" class="pay">Order</button></div>
+  <!-- <div class="col"><button mat-raised-button color="primary" class="pay">Order</button></div> -->
 </div>
-<table class="table">
+<table class="table" >
   <thead>
     <tr>
       <th scope="col">Image</th>
@@ -22,8 +22,12 @@
         <button (click)="AddingItem(item)" class="btn btn-success">+</button>
    
       </td>
-      <td>{{item.price}}</td>
+      <td>{{item.price * item.quantity}}</td>
       <td><button class="btn btn-danger" (click)="removeCartItem(item.orderId)"><i class="fa-solid fa-trash"></i></button></td>
     </tr>
   </tbody>
 </table>
+
+<div class="row">
+  <a href="" routerLink="" >Go Back</a>
+</div>

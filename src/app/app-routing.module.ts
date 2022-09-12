@@ -6,6 +6,7 @@ import { EditDishComponent } from './components/admin/edit-dish/edit-dish.compon
 import { GetAllDishesComponent } from './components/admin/get-all-dishes/get-all-dishes.component';
 import { DisplayCartComponent } from './components/cart/display-cart/display-cart.component';
 import { FoodDishComponent } from './components/food-dish/food-dish.component';
+import { FoodDishesComponent } from './components/foodDish/food-dishes/food-dishes.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -13,7 +14,7 @@ import { FoodDish } from './models/food-dish';
 import { Register } from './models/register';
 
 const routes: Routes = [
-  { path: '', component: FoodDishComponent,canActivate:[AuthGuard] },
+  { path: '', component: FoodDishesComponent,canActivate:[AuthGuard] },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
