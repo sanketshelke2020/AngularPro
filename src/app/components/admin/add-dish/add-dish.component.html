@@ -1,0 +1,60 @@
+<!-- <div class="card h-100 d-flex align-items-center justify-content-center">
+  <h2>Add Item</h2>
+  <form id="add-item" #loginForm="ngForm" (ngSubmit)="addDish(loginForm)">
+      <label for="item-name">Name: 
+          <input type="text" name="dishName" id="item-name" placeholder="e.g Rice" [(ngModel)]="dish.dishName" required>
+      </label>
+      <label for="item-name">Descrition: 
+          <input type="text" name="dishDescription" id="item-name" placeholder="e.g Veg Fried Rice" [(ngModel)]="dish.dishDescription"  required>
+      </label>
+      <label for="item-name">Image Path: 
+        <input type="text" name="imagePath" id="item-name" placeholder="e.g unsplash/rice.jpg" [(ngModel)]="dish.imagePath" required>
+      </label>
+
+      <label for="item-price">Price: 
+          <input type="number" name="price" id="item-price" min="10" step="10" placeholder="e.g 200" required [(ngModel)]="dish.price">
+      </label>
+
+      
+      <input type="submit" value="Add Dish"/>
+  </form>
+</div> -->
+<div class="container">
+    <div class="row"><h2>Add Dish</h2></div>
+    <form #loginForm="ngForm" (ngSubmit)="addDish(loginForm)" class="example-form">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Dish Name</mat-label>
+            <input matInput placeholder="Enter Name" #name="ngModel" name="dishName" [(ngModel)]="dish.dishName" required pattern="[A-Za-z\s]+" minlength="3">
+            <mat-error *ngIf="name.errors?.['pattern']">
+              Only characters and space allowed
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Descrition</mat-label>
+            <input matInput placeholder="Enter Descrition" #desc="ngModel" name="dishDescription" [(ngModel)]="dish.dishDescription" required pattern="[A-Za-z\s]+" minlength="3">
+            <mat-error *ngIf="desc.errors?.['pattern']">
+                Only characters and space allowed
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Image Path</mat-label>
+            <input matInput placeholder="Enter Image Path" #imagePath="ngModel" name="imagePath" [(ngModel)]="dish.imagePath" required  minlength="3">
+            <!-- <mat-error *ngIf="imagePath.errors?.['pattern']">
+              Invalid Name
+            </mat-error> -->
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label>Price</mat-label>
+            <input matInput type="number" placeholder="Ex. 120"  min="10" name="price" [(ngModel)]="dish.price" #price = "ngModel" required>
+            <span matSuffix>&#8377;	</span>
+            <mat-error *ngIf="price.invalid">Min size: 10</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Add</button>
+          </form>
+</div> 
+
+          

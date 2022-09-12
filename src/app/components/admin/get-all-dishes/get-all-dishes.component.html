@@ -1,0 +1,32 @@
+<router-outlet></router-outlet>
+<div class="con">
+<div class="row titleCon">
+  <div class="col"><h2>Food Dishes  </h2></div>
+  <div class="col"><button class="btn  btn-primary addBtn btn-sm" [routerLink]="['/addDish']"><i class="fa-solid fa-plus"></i></button></div>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Descrition</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dish of dishes">
+      <th><img [src]="dish.imagePath" alt="Category" height="50px" width="50px" ></th>
+      <td>{{dish.dishName}}</td>
+      <td>{{dish.dishDescription}}</td>
+      <td>&#8377;{{dish.price}}</td>
+
+      <td style="text-align: center;">
+        <button class="btn deleteBtn"  (click)="removeDish(dish.dishId)"><i class="fa-solid fa-trash"></i></button>
+        <button class="btn editBtn" (click)="editDish(dish)"><i class="fa-solid fa-square-pen"></i></button>
+      </td>
+    </tr>
+    </tbody>
+    </table>  
+</div>
+

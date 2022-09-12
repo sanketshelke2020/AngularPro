@@ -1,0 +1,48 @@
+
+<div class="container">
+<div class="row"><h2>Register to FoodYFood</h2></div>
+<form #loginForm="ngForm" (ngSubmit)="registerUser(loginForm)" class="example-form">
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Enter Name" #name="ngModel" name="name" [(ngModel)]="register.name" required pattern="[A-Za-z]+" minlength="3">
+    <mat-error *ngIf="name.errors?.['pattern']">
+      Invalid Name
+    </mat-error>
+  </mat-form-field>
+  
+  
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" name="email" [(ngModel)]="register.email" required #emai="ngModel" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*">
+    <mat-error *ngIf="emai.errors?.['pattern']">
+      Invalid Email
+    </mat-error>
+  </mat-form-field>
+
+  
+  
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Enter your password</mat-label>
+    <input matInput type="password" name="password" [(ngModel)]="register.password" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}" #password = "ngModel" >
+    <mat-error *ngIf="password.errors?.['pattern']">
+      Minimum eight characters, at least one letter and one number
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Phone number</mat-label>
+    <input matInput type="text" name="contactNo" [(ngModel)]="register.contactNo" required pattern="(7|8|9)\d{9}" #contact="ngModel" >
+    <mat-error *ngIf="contact.errors?.['pattern']">
+      Invalid contact Number
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Enter Name" name="address" [(ngModel)]="register.address" required minlength="3" >
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Register</button>
+ </form>
+
+</div> 

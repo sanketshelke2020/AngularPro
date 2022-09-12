@@ -1,0 +1,31 @@
+.con{
+  width: 90%;
+  margin: 0 auto;
+
+}
+.deleteBtn{
+  color: red;
+}
+.editBtn{
+  color: rgb(6, 163, 202);
+}
+.btn{
+  font-size: 1.2rem;
+}
+.table{
+  vertical-align: middle;
+
+
+
+}
+.addBtn{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 1.3rem;
+  float: right;
+}
+.titleCon{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}

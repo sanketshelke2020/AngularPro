@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col"><h2>Total : {{total}}</h2></div>
+  <div class="col"><button mat-raised-button color="primary" class="pay">Order</button></div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let item of cartItems">
+      <td><img [src]="item.imagePath" alt="Category" height="100px" width="100px" ></td>
+      <td>{{item.dishName}}</td>
+      <td>
+        <button (click)="SubtractItem(item)" class="btn btn-danger">-</button>&nbsp;
+        {{item.quantity}}&nbsp;
+        <button (click)="AddingItem(item)" class="btn btn-success">+</button>
+   
+      </td>
+      <td>{{item.price}}</td>
+      <td><button class="btn btn-danger" (click)="removeCartItem(item.orderId)"><i class="fa-solid fa-trash"></i></button></td>
+    </tr>
+  </tbody>
+</table>

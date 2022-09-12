@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <span>FoodYFood</span>&nbsp;
+  
+  <span class="example-spacer"></span>
+  <button mat-button color="accent" routerLink="cart" style="font-size: 1.3rem;" *ngIf="!isAdmin&&token"><i class="fa-solid fa-cart-shopping"></i></button>
+  <button mat-raised-button color="accent" routerLink="register" *ngIf="!token">Register</button>&nbsp;
+  <button mat-raised-button color="accent" routerLink="login" *ngIf="!token">Login</button>&nbsp;
+  <button mat-raised-button color="accent" routerLink="logout" *ngIf="token">Logout</button>&nbsp;
+</mat-toolbar>
+
