@@ -28,6 +28,7 @@ import {MatTableModule} from '@angular/material/table';
 import { GetAllDishesComponent } from './components/admin/get-all-dishes/get-all-dishes.component';
 import { AddDishComponent } from './components/admin/add-dish/add-dish.component';
 import { EditDishComponent } from './components/admin/edit-dish/edit-dish.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { EditDishComponent } from './components/admin/edit-dish/edit-dish.compon
     GetAllDishesComponent,
     AddDishComponent,
     EditDishComponent,
+    HomeComponent,
 
   ],
   imports: [

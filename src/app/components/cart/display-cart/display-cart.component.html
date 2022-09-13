@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col"><h2>Total : {{total}}</h2></div>
+  <div class="col"><h2>Total : &#8377; {{total}}</h2></div>
   <!-- <div class="col"><button mat-raised-button color="primary" class="pay">Order</button></div> -->
 </div>
 <table class="table" >
@@ -22,7 +22,7 @@
         <button (click)="AddingItem(item)" class="btn btn-success">+</button>
    
       </td>
-      <td>{{item.price * item.quantity}}</td>
+      <td>&#8377; {{item.price * item.quantity}}</td>
       <td><button class="btn btn-danger" (click)="removeCartItem(item.orderId)"><i class="fa-solid fa-trash"></i></button></td>
     </tr>
   </tbody>

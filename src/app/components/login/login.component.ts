@@ -23,7 +23,6 @@ login:Login
 
   ngOnInit(): void {
   
-    // this.gotoLogin();
   }
 
   userLogin(loginForm:NgForm){

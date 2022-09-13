@@ -22,19 +22,23 @@ dish:FoodDish
   addDish(loginForm:NgForm){
     this.dish = loginForm.value;
     console.log(this.dish)
-    this.admin.addDish(this.dish).subscribe(res=>{
-      console.log(res);
-      
-      if(res){
-            Swal.fire(
-              'Added',
-              'Dish Added',
-              'success'
-            
-            )}
-            this.route.goToGetAllItems();
-      
-    })
-  }
+    this.admin.addDish(this.dish).subscribe(
+      (res)=>{
+        Swal.fire(
+                  'Added',
+                  'Dish Added',
+                  'success'
+                
+                )
+                this.route.goToGetAllItems();
+              },
+                (e)=>{
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Dish Exists',
+                    text: 'Food Dish Exists',
+                  })
+                }
+              )}
 
 }

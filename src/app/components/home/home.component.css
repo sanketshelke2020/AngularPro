@@ -1,0 +1,129 @@
+.primary-heading span{
+  color: #FF4081;
+}
+.secondary-heading{
+  text-align: center;
+  color: black;
+  font-size: xx-large;
+  font-family: 'Nunito', sans-serif;
+  margin: 50px auto;
+}
+
+.row{
+  width: 100%;
+}
+.main{
+  background-color: #F5F5F5;
+
+  height: 80vh;
+  width: 100vw;
+}
+.mainImg{
+  padding-top: 100px;
+  width: 100%;
+}
+.mainContent{
+  margin: 100px;
+  margin-top: 100px;
+  width: 450px;
+  margin-left: 120px;
+}
+.primary-heading{
+  font-size: 3.2rem;
+  color: black;
+  line-height: 3.2rem;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.mainContent p{
+  margin-top: 30px;
+  letter-spacing: 1.5px;
+  line-height: 1rem;
+}
+.registerBtn{
+  height: 40px;
+  width: 120px;
+  border: 1px solid #FF4081;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: #FF4081;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+.imgDiv{
+  background-color: rgb(245, 245, 245);
+  margin: 0 auto;
+  height: 500px;
+  width: 5  00px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+}
+
+
+.iconCol{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.icon{
+  border-radius: 50%;
+  background-color: #F5E6F7;
+  width: 50px;  
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  margin: 0 auto;
+  
+}
+.tertiary-heading{
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 10px auto;
+
+}
+.iconP{
+  width: 50%;
+  margin: 0 auto;
+  letter-spacing: 0.7px;
+  font-size: .8rem;
+}
+
+
+.orderNow{
+  height: 400px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../../../assets/images/order.jpg') center center/cover fixed;
+  text-align: center;
+  color: white;
+}
+.orderNow h2{
+  margin-top: 100px;
+  color: white;
+}
+.orderNow p{
+  width: 500px;
+  margin: 0 auto;
+}
+.orderBtn{
+  height: 40px;
+  width: 120px;
+  border: 1px solid #FF4081;
+  border-radius: 20px;
+  margin-top: 40px;
+  background-color: #FF4081;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+footer{
+  height: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

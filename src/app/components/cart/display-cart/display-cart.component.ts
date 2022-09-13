@@ -32,13 +32,7 @@ total:number=0;
   removeCartItem(orderId:any){
     this.cartService.removeCartItem(orderId).subscribe(response=>{
       if(response){
-        // Swal.fire({
-        //   position: 'top-end',
-        //   icon: 'success',
-        //   title: 'Item Removed From Cart',
-        //   showConfirmButton: false,
-        //   timer: 1500
-        // })
+       
         window.location.reload();
       }
       
@@ -49,13 +43,7 @@ total:number=0;
     this.cartService.SubtractItem(cart).subscribe(response=>{
       
       if(response){
-        // Swal.fire({
-        //   position: 'top-end',
-        //   icon: 'success',
-        //   title: 'Quantity updated',
-        //   showConfirmButton: false,
-        //   timer: 15
-        // })
+
         window.location.reload();
       }
       
@@ -66,13 +54,6 @@ total:number=0;
     this.cartService.AddingItem(cart).subscribe(response=>{
       
       if(response){
-        // Swal.fire({
-        //   position: 'top-end',
-        //   icon: 'success',
-        //   title: 'Quantity Updated',
-        //   showConfirmButton: false,
-        //   timer: 1500
-        // })
         
         window.location.reload();
       }

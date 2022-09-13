@@ -1,3 +1,11 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.navBtn{
+  border-radius: 30px;
+  margin-left: 10px;
+  letter-spacing: .7px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  height: 35px;
+  background-color: #FF4081;
+}

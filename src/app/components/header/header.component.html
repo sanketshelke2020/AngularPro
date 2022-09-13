@@ -1,10 +1,11 @@
 <mat-toolbar>
-  <span routerLink="">FoodYFood</span>&nbsp;
-  
+  <span routerLink=""><i class="fa-solid fa-utensils" style="color:#FF4081 ;"></i>  FoodYFood</span>&nbsp;
+  <button mat-button style="margin-left:30px;" routerLink="" *ngIf="token&& !Admin()">Home</button>
+  <button mat-button  routerLink="user" *ngIf="token&& !Admin()">Menu</button>
   <span class="example-spacer"></span>
-  <button mat-button color="accent" routerLink="cart" style="font-size: 1.3rem;" *ngIf="token&& !Admin()"><i class="fa-solid fa-cart-shopping"></i></button>
-  <button mat-raised-button color="accent" routerLink="register" *ngIf="!token">Register</button>&nbsp;
-  <button mat-raised-button color="accent" routerLink="login" *ngIf="!token">Login</button>&nbsp;
-  <button mat-raised-button color="accent" routerLink="logout" *ngIf="token">Logout</button>&nbsp;
+  <button mat-button routerLink="cart" style="font-size: 1.3rem;" *ngIf="token&& !Admin()"><i class="bi bi-cart-dash"></i></button>
+  <button mat-raised-button color="accent" routerLink="register" *ngIf="!token" class="navBtn">Register</button>&nbsp;
+  <button mat-raised-button color="accent" routerLink="login" *ngIf="!token" class="navBtn" >Login</button>&nbsp;
+  <button mat-raised-button color="accent" routerLink="logout" *ngIf="token" class="navBtn">Logout</button>&nbsp;
 </mat-toolbar>
 

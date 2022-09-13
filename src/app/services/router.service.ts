@@ -9,7 +9,7 @@ export class RouterService {
 
   constructor(private router : Router) { }
   goToMenu(){
-    this.router.navigate(['']);
+    this.router.navigate(['user']);
   }
   goToLogin(){
     this.router.navigate(['login']);
