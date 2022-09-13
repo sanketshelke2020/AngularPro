@@ -39,8 +39,7 @@ login:Login
           // Convet from json
           let jsonObject = JSON.stringify(res);
           let jsonToken = JSON.parse(jsonObject);
-          // console.log(`User token: ${jsonToken["Token"]}`);
-          // console.log(jsonToken["Email"]);
+  
         
           localStorage.setItem('UserToken',jsonToken["Token"]);
           localStorage.setItem('UserEmail',jsonToken['Email']); 

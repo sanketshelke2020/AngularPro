@@ -1,24 +1,4 @@
-<!-- <div class="card h-100 d-flex align-items-center justify-content-center">
-  <h2>Add Item</h2>
-  <form id="add-item" #loginForm="ngForm" (ngSubmit)="addDish(loginForm)">
-      <label for="item-name">Name: 
-          <input type="text" name="dishName" id="item-name" placeholder="e.g Rice" [(ngModel)]="dish.dishName" required>
-      </label>
-      <label for="item-name">Descrition: 
-          <input type="text" name="dishDescription" id="item-name" placeholder="e.g Veg Fried Rice" [(ngModel)]="dish.dishDescription"  required>
-      </label>
-      <label for="item-name">Image Path: 
-        <input type="text" name="imagePath" id="item-name" placeholder="e.g unsplash/rice.jpg" [(ngModel)]="dish.imagePath" required>
-      </label>
 
-      <label for="item-price">Price: 
-          <input type="number" name="price" id="item-price" min="10" step="10" placeholder="e.g 200" required [(ngModel)]="dish.price">
-      </label>
-
-      
-      <input type="submit" value="Add Dish"/>
-  </form>
-</div> -->
 <div class="container">
   <div class="row"><h2>Edit Dish</h2></div>
   <form #loginForm="ngForm" (ngSubmit)="updateDish(loginForm)" class="example-form">

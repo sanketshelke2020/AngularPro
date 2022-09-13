@@ -30,7 +30,6 @@ export class FoodDishesComponent implements OnInit {
       this.cartObj.quantity = 1;
       this.cartObj.price = dish.price;
       this.cartObj.imagePath = dish.imagePath;
-      // console.log(this.cartObj);
 
       this.cartService.addToCart(this.cartObj).subscribe(res=>{
         Swal.fire({

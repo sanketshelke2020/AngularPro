@@ -15,14 +15,6 @@ register:Register;
 // loginForm:FormGroup
   constructor(private registerService:RegisterService,private route:RouterService) {
     this.register = new Register();
-    // this.loginForm = this.formBuilder.group({
-    //   name:['',Validators.compose([Validators.required,Validators.minLength(2)])],
-    //   email: ['', Validators.required],
-    //   password: ['', Validators.required],
-    //   contactNo: ['', Validators.required],
-    //   address: ['', Validators.required],
-
-    // });
    }
 
   ngOnInit(): void {
